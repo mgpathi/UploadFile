@@ -9,6 +9,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MenulistComponent } from './menulist/menulist.component';
 import { UploadComponent } from './upload/upload.component';
 import { UploadService } from './upload/upload.service';
+import { AboutComponent } from './about/about.component';
+import { LoginComponent } from './login/login.component';
+import { DownloadsComponent } from './downloads/downloads.component';
 
 
 @NgModule({
@@ -16,7 +19,10 @@ import { UploadService } from './upload/upload.service';
     AppComponent,
     DashboardComponent,
     MenulistComponent,
-    UploadComponent
+    UploadComponent,
+    AboutComponent,
+    LoginComponent,
+    DownloadsComponent
   ],
   imports: [
     BrowserModule,
