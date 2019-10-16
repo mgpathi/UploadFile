@@ -2,21 +2,22 @@
   <div class="title">
     <h1>Welcome to Aileensoul</h1>
   </div>
-  <form name="login_form" id="login_form" method="post" novalidate="novalidate">
+  <form [formGroup]="loginForm">
     <div class="form-group">
-      <input type="email" value="" name="email_login" id="email_login" class="form-control input-sm" placeholder="Email Address*">
+      <input type="email" value="" formControlName="email" name="email_login" id="email_login" class="form-control input-sm" placeholder="Email Address*">
       <div id="error2">
       </div>
       <div id="errorlogin"></div>
     </div>
     <div class="form-group">
-      <input type="password" name="password_login" id="password_login" class="form-control input-sm" placeholder="Password*">
+      <input type="password" name="password_login" formControlName="password" id="password_login" class="form-control input-sm"
+        placeholder="Password*">
       <div id="error1">
       </div>
       <div id="errorpass"></div>
     </div>
     <p class="pt-20 fw">
-      <button class="btn1" onclick="login()">Login</button>
+      <button class="btn1" (click)="login()">Login</button>
     </p>
     <p class=" text-center">
       <a href="javascript:void(0)" id="myBtn">Forgot Password ?</a>
