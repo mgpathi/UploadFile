@@ -13,6 +13,7 @@ import { UploadService } from './upload/upload.service';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { DownloadsComponent } from './downloads/downloads.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { DownloadsComponent } from './downloads/downloads.component';
     UploadComponent,
     AboutComponent,
     LoginComponent,
-    DownloadsComponent
+    DownloadsComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

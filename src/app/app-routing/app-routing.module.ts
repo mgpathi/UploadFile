@@ -7,6 +7,7 @@ import { UploadComponent } from '../upload/upload.component';
 import { AboutComponent } from '../about/about.component';
 import { LoginComponent } from '../login/login.component';
 import { DownloadsComponent } from '../downloads/downloads.component';
+import { SignupComponent } from '../signup/signup.component';
 
 const routes: Routes = [
     {
@@ -33,6 +34,10 @@ const routes: Routes = [
         path: 'upload',
         component: UploadComponent,
     },
+    {
+        path: 'signup',
+        component: SignupComponent,
+    }
 
 ];
 
