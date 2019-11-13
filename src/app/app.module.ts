@@ -14,6 +14,7 @@ import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { DownloadsComponent } from './downloads/downloads.component';
 import { SignupComponent } from './signup/signup.component';
+import { AdminModule } from './admin/admin.module';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { SignupComponent } from './signup/signup.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AdminModule
   ],
   providers: [UploadService],
   bootstrap: [AppComponent]

@@ -18,6 +18,14 @@ export class SignupComponent implements OnInit {
     });
   }
 
+  ngDoCheck() {
+    console.log("checking started...");
+  }
+
+  ngOnChanges() {
+    console.log("ng on changes started...");
+  }
+
   onSubmit(form:FormGroup) {
     console.log("Valid? ",form.valid);
     console.log("Name", form.value.name);
