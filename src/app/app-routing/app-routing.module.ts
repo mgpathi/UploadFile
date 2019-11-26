@@ -8,6 +8,10 @@ import { AboutComponent } from '../about/about.component';
 import { LoginComponent } from '../login/login.component';
 import { DownloadsComponent } from '../downloads/downloads.component';
 import { SignupComponent } from '../signup/signup.component';
+import { AuthGuard } from '../guards/auth.guard';
+import { DealerComponent } from '../dealer/dealer.component';
+import { DealerDashboardComponent } from '../dealer-dashboard/dealer-dashboard.component';
+import { StockReleaseComponent } from '../stock-release/stock-release.component';
 
 const routes: Routes = [
     {
@@ -37,6 +41,14 @@ const routes: Routes = [
     {
         path: 'signup',
         component: SignupComponent,
+    },
+    {
+        path: 'dealer', canActivate: [AuthGuard], component: DealerComponent,
+        children: [
+            { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+            { path: 'stock', component: StockReleaseComponent, canActivateChild:[AuthGuard] },
+            { path: 'dashboard', component: DealerDashboardComponent }
+        ]
     }
 
 ];

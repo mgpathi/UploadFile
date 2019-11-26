@@ -15,6 +15,10 @@ import { LoginComponent } from './login/login.component';
 import { DownloadsComponent } from './downloads/downloads.component';
 import { SignupComponent } from './signup/signup.component';
 import { AdminModule } from './admin/admin.module';
+import { DealerComponent } from './dealer/dealer.component';
+import { DealerDashboardComponent } from './dealer-dashboard/dealer-dashboard.component';
+import { StockReleaseComponent } from './stock-release/stock-release.component';
+import { AuthGuard } from './guards/auth.guard';
 
 
 @NgModule({
@@ -26,7 +30,10 @@ import { AdminModule } from './admin/admin.module';
     AboutComponent,
     LoginComponent,
     DownloadsComponent,
-    SignupComponent
+    SignupComponent,
+    DealerComponent,
+    DealerDashboardComponent,
+    StockReleaseComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +42,7 @@ import { AdminModule } from './admin/admin.module';
     ReactiveFormsModule,
     AdminModule
   ],
-  providers: [UploadService],
+  providers: [UploadService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
