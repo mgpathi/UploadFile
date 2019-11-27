@@ -19,6 +19,8 @@ import { DealerComponent } from './dealer/dealer.component';
 import { DealerDashboardComponent } from './dealer-dashboard/dealer-dashboard.component';
 import { StockReleaseComponent } from './stock-release/stock-release.component';
 import { AuthGuard } from './guards/auth.guard';
+import { SaleregisterComponent } from './saleregister/saleregister.component';
+import { PendingstockComponent } from './pendingstock/pendingstock.component';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { AuthGuard } from './guards/auth.guard';
     SignupComponent,
     DealerComponent,
     DealerDashboardComponent,
-    StockReleaseComponent
+    StockReleaseComponent,
+    SaleregisterComponent,
+    PendingstockComponent
   ],
   imports: [
     BrowserModule,

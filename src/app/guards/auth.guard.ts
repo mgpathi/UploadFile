@@ -10,17 +10,7 @@ export class AuthGuard implements CanActivate {
     return true;
   }
 
-  canActivateChild(route: ActivatedRouteSnapshot,state: RouterStateSnapshot): boolean{
-    debugger
-    //const user = this.userSessionService.data;
-    // const admin = localStorage.getItem('admin');
-    let val = undefined;
-    // if(val){
-    //   return true;      
-    // }else{
-    //   console.log("insdie else..")
-    // }
+  canActivateChild(route:  ActivatedRouteSnapshot, state:  RouterStateSnapshot):  boolean {
     return true;
-    
-    } 
+  }
 }
