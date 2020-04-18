@@ -7,7 +7,10 @@ import { UploadService } from './upload.service';
   styleUrls: ['./upload.component.css']
 })
 export class UploadComponent implements OnInit {
-
+  imgURL: any;
+  imagePath: any;
+  message: string;
+  resultList = [];
   fileToUpload: File = null;
   constructor(private fileUploadService: UploadService) { }
 
@@ -24,6 +27,26 @@ export class UploadComponent implements OnInit {
     }, error => {
       console.log(error);
     });
+  }
+
+  
+
+  preview(files) {
+    if (files.length === 0)
+      return;
+ 
+    var mimeType = files[0].type;
+    if (mimeType.match(/image\/*/) == null) {
+      this.message = "Only images are supported.";
+      return;
+    }
+ 
+    var reader = new FileReader();
+    this.imagePath = files;
+    reader.readAsDataURL(files[0]); 
+    reader.onload = (_event) => { 
+      this.imgURL = reader.result; 
+    }
   }
 
 }

@@ -1,0 +1,16 @@
+
+<div class="row">
+  <label for="uname">Name</label>
+  <input type="text" name="uname" [(ngModel)]="personName">
+  <br>
+  <label for="Age">Age</label>
+  <input type="text" name="Age" [(ngModel)]="age">
+  <br>
+  <label for="mobilenumber">Mobile</label>
+  <input type="text" name="mobilenumber" [(ngModel)]="mobile">
+  <label for="emailId">Email</label>
+  <input type="email" name="emailId" [(ngModel)]="email">
+
+  <button type="button"  (click)="submitData()">Submit</button>
+</div>
+<a href="tel:+919390639040"><i class="fa wp-icon fa-whatsapp"></i>call</a>

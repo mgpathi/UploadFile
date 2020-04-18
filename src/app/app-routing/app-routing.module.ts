@@ -14,6 +14,7 @@ import { DealerDashboardComponent } from '../dealer-dashboard/dealer-dashboard.c
 import { StockReleaseComponent } from '../stock-release/stock-release.component';
 import { SaleregisterComponent } from '../saleregister/saleregister.component';
 import { PendingstockComponent } from '../pendingstock/pendingstock.component';
+import { ContactComponent } from '../contact/contact.component';
 
 const routes: Routes = [
     {
@@ -45,6 +46,10 @@ const routes: Routes = [
         component: SignupComponent,
     },
     {
+        path: 'health',
+        component: SignupComponent,
+    },
+    {
         path: 'dealer', canActivate: [AuthGuard], component: DealerComponent,
         children: [{
             path: '',
@@ -57,6 +62,11 @@ const routes: Routes = [
                 { path: 'pendingstock', component: PendingstockComponent },
             ]
         }]
+    }
+    ,
+    {
+        path: 'contact',
+        component: ContactComponent,
     }
 
 ];

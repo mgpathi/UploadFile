@@ -1,3 +1,29 @@
 <p>
   stock-release works!
 </p>
+<button (click)="getUsers()"> get data</button>
+<html>
+<table *ngIf="users">
+  <thead>
+    <tr>
+      <th>
+        Sno
+      </th>
+      <th>
+        Name
+      </th>
+      <th>
+        Bike
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users; let i= index;">
+      <td>{{i+1}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.userSettings.bike}}</td>
+    </tr>
+  </tbody>
+</table>
+<p>Table ends here..!</p>
+</html>

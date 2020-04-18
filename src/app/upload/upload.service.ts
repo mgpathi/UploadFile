@@ -21,4 +21,13 @@ export class UploadService {
     console.log(fileToUpload);
   }
 
+  getAllUsres(): any {
+    return this.httpClient.get("http://localhost:8102/user/");
+  }
+
+  submitUser(reqBody) :any {
+    return this.httpClient.post("http://localhost:8102/user/create",reqBody);
+  }
+
+
 }

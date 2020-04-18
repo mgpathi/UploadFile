@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -8,7 +9,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class SignupComponent implements OnInit {
   myForm: FormGroup
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder,private router:Router) { }
 
   ngOnInit() {
     this.myForm = this.fb.group({
@@ -30,6 +31,11 @@ export class SignupComponent implements OnInit {
     console.log("Valid? ",form.valid);
     console.log("Name", form.value.name);
     console.log("email",form.value.email);
+    this.router.navigate(['/dealer']);
+    let myObj = {
+      name:form.value.name,
+      email:form.value.email
+    };
   }
 
 }
